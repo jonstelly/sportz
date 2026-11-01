@@ -1,6 +1,6 @@
 # Sportz
 
-SvelteKit 3 + Svelte 5 + TypeScript web app, `adapter-node`, shipped as one Docker container. Domain language: `GLOSSARY.md`; decisions: `docs/adr/` (both created on demand).
+SvelteKit 3 + Svelte 5 + TypeScript web app on Node 26 and pnpm, `adapter-node`, shipped as one Docker container. Domain language: `GLOSSARY.md`; decisions: `docs/adr/` (both created on demand).
 
 ## Workflow (mandatory)
 
@@ -15,10 +15,10 @@ SvelteKit 3 + Svelte 5 + TypeScript web app, `adapter-node`, shipped as one Dock
 
 Run from the repo root.
 
-- `npm run dev`: dev server
-- `npm run check`: svelte-check + types
-- `npm test`: Vitest, single run (`npm run test:unit` watches)
-- `npm run build` / `npm run preview`: production build / serve it
+- `pnpm dev`: dev server
+- `pnpm check`: svelte-check + types
+- `pnpm test`: Vitest, single run (`pnpm test:unit` watches)
+- `pnpm build` / `pnpm preview`: production build / serve it
 - `docker build -t sportz . && docker run -p 3000:3000 sportz`
 
 ## Architecture
@@ -42,8 +42,8 @@ Run from the repo root.
 
 ## Verification
 
-- Inner loop: `npm test` for changed behavior. Changed behavior gets a regression test.
-- Before handoff: `npm run check`, `npm test`, `npm run build`. Run the Docker build when `Dockerfile` or dependencies change.
+- Inner loop: `pnpm test` for changed behavior. Changed behavior gets a regression test.
+- Before handoff: `pnpm check`, `pnpm test`, `pnpm build`. Run the Docker build when `Dockerfile` or dependencies change.
 
 ## Agent skills
 

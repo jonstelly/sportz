@@ -3,11 +3,11 @@
 SvelteKit app served by `adapter-node`.
 
 ```sh
-npm install
-npm run dev      # dev server
-npm test         # unit tests
-npm run check    # types + svelte-check
-npm run build    # production build into ./build
+pnpm install
+pnpm dev        # dev server
+pnpm test       # unit tests
+pnpm check      # types + svelte-check
+pnpm build      # production build into ./build
 ```
 
 ## Docker
